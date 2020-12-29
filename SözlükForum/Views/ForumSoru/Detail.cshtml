@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*@model SözlükForum.Models.ForumSoru*@
+@model IEnumerable<SözlükForum.Models.ForumSoru>
+@{
+}
+<div style="background-color:#faf7d3; border-radius:5%" class="container">
+    @foreach (var item in Model)
+    {
+        <div>
+            <h2 class="text-center">@Html.DisplayFor(modelItem => item.soru)</h2>
+            <p class="text-right">@Html.DisplayFor(modelItem => item.kullanici.kullanıcıAd)</p>
+        </div>
+        <hr />
+        <div>
+            <p>@Html.DisplayFor(modelItem => item.icerik)</p>
+            <p class="text-right"><i>@Html.DisplayFor(modelItem => item.eklemeTarih)</i></p>
+        </div>
+    }
+</div>
+<div>
+    <h5>Yorumlar:</h5>
+</div>

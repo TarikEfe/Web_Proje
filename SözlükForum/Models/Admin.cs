@@ -11,13 +11,13 @@ namespace SözlükForum.Models
     {
         [Key]
         public int id { get; set; }
-
+        [Required(ErrorMessage = "Burayı Boş Bırakamazsınız...")]
         [EmailAddress]
         public string email { get; set; }
-
+        [Required(ErrorMessage = "Burayı Boş Bırakamazsınız...")]
         [Column(TypeName = "Varchar(10)")]
         public string sifre { get; set; }
-
+        [Required(ErrorMessage = "Burayı Boş Bırakamazsınız...")]
         [Column(TypeName = "Varchar(30)")]
         public string kullaniciAdi { get; set; }
     }

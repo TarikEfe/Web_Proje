@@ -16,5 +16,6 @@ namespace SözlükForum.Models
 
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Kullanici> Kullanicis { get; set; }
+        public DbSet<ForumSoru> ForumSorus { get; set; }
     }
 }

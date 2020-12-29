@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tarık\\Desktop\\SözlükForum\\SözlükForum\\SözlükForum.csproj": {}
+    "C:\\Users\\user\\Desktop\\SözlükForum28-12\\SözlükForum\\SözlükForum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tarık\\Desktop\\SözlükForum\\SözlükForum\\SözlükForum.csproj": {
+    "C:\\Users\\user\\Desktop\\SözlükForum28-12\\SözlükForum\\SözlükForum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tarık\\Desktop\\SözlükForum\\SözlükForum\\SözlükForum.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\SözlükForum28-12\\SözlükForum\\SözlükForum.csproj",
         "projectName": "SözlükForum",
-        "projectPath": "C:\\Users\\Tarık\\Desktop\\SözlükForum\\SözlükForum\\SözlükForum.csproj",
-        "packagesPath": "C:\\Users\\Tarık\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tarık\\Desktop\\SözlükForum\\SözlükForum\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\SözlükForum28-12\\SözlükForum\\SözlükForum.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\SözlükForum28-12\\SözlükForum\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Tarık\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -88,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
