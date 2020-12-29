@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SözlükForum</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-md navbar-light" style="background-color:#e5e969;">
             <div class="container">
@@ -17,11 +19,11 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <form class="form-inline" style="margin-left:15%;">
+                    <form asp-controller="Home" asp-action="Index" class="form-inline" style="margin-left:15%;">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" name="SearchString" placeholder="Ara..">
                             <div class="input-group-append">
-                                <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+                                <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </form>
@@ -44,23 +46,7 @@
     <br />
     <div class="container">
         <div class="row">
-            <div class="col-3">
-                <div class="overflow-auto container " style="max-height:640px; position:fixed; border-right-style: solid; max-width:250px;">
-                    <h3 style="background-color:#e5e969; border-radius:5px;">Gündem</h3>
-                    <hr />
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-light">Forum1</li>
-                        <li class="list-group-item list-group-item-light">Forum2</li>
-                        <li class="list-group-item list-group-item-light">Forum3</li>
-                        <li class="list-group-item list-group-item-light">Forum4</li>
-                        <li class="list-group-item list-group-item-light">Forum5</li>
-                        <li class="list-group-item list-group-item-light">Forum6</li>
-                        <li class="list-group-item list-group-item-light">Forum7</li>
-                        <li class="list-group-item list-group-item-light">Forum8</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-9">
+            <div class="col-12">
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>

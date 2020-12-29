@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SözlükForum.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SözlükForum.Controllers
 {
@@ -17,14 +19,38 @@ namespace SözlükForum.Controllers
         {
             _logger = logger;
         }
+        Contex c = new Contex();
 
-        public IActionResult Index()
+        [Authorize]
+        public IActionResult Index(string searchString)
         {
-            return View();
+            var bilgi = c.ForumSorus.Include(i => i.kullanici);
+            var bilgiler = c.ForumSorus.OrderBy(r => Guid.NewGuid()).Take(10);
+            ViewData["gundem"] = bilgiler;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                bilgi = c.ForumSorus.Where(x => x.soru.Contains(searchString)).Include(i => i.kullanici);
+                var bilgibil = c.ForumSorus.Where(x => x.soru.Contains(searchString)).Include(i => i.kullanici).Count();
+                if (bilgibil == 0)
+                {
+                    bilgi = null;
+                }
+            }
+
+            return View(bilgi);
+        }
+
+        public IActionResult Gundem()
+        {
+            var bilgi = c.ForumSorus.Include(i => i.kullanici).OrderBy(o => o.eklemeTarih);
+            var bilgiler = c.ForumSorus.Include(i => i.kullanici).OrderByDescending(o => o.eklemeTarih);
+            ViewData["gundem"] = bilgiler;
+            return PartialView(bilgi);
         }
 
         public IActionResult Privacy()
         {
+
             return View();
         }
 

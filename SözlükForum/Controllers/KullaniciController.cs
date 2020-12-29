@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using SözlükForum.Models;
 
@@ -21,12 +23,32 @@ namespace SözlükForum.Controllers
         [HttpPost]
         public IActionResult YeniKullanici(Kullanici k)
         {
-            c.Kullanicis.Add(k);
-            c.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                c.Kullanicis.Add(k);
+                c.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("YeniKullanici");
+            }
         }
-        public IActionResult GirisYap()
+        
+        public async Task<IActionResult> GirisYap(Kullanici k)
         {
+            var bilgi = c.Kullanicis.FirstOrDefault(x => x.kullanıcıAd == k.kullanıcıAd && x.sifre == k.sifre);
+            if (bilgi != null)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, k.kullanıcıAd)
+                };
+                var useridentity = new ClaimsIdentity(claims, "Login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
+                await HttpContext.SignInAsync(principal);
+                return RedirectToAction("index", "Home");
+            }
             return View();
         }
     }
