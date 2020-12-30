@@ -500,8 +500,6 @@ C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\bin\Debug\netcoreapp3.1\r
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.csprojAssemblyReference.cache
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.AssemblyInfoInputs.cache
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.AssemblyInfo.cs
-C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.RazorAssemblyInfo.cache
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.RazorAssemblyInfo.cs
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.TagHelpers.input.cache
@@ -529,3 +527,6 @@ C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\S
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.pdb
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.genruntimeconfig.cache
 C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Gundemm.cshtml.g.cs
+C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\SözlükForum.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\SözlükForum28-12\SözlükForum\obj\Debug\netcoreapp3.1\Razor\Views\ForumSoru\Kayit.cshtml.g.cs

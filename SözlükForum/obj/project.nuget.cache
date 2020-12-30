@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b9pxZ9Uz8UgxcZxARGG60zR0pDt31GgcsBFUHuSaa3hRr08z0h8HJWoxBTOvuhEXt57sRqLQos1PVpnYsu2fvA==",
+  "dgSpecHash": "8Apn9KD8sfw7cUx/jHTx5fpr5QlwCHhpQW6kVCKp1XsJRPDDNrMoQS1zem6W+cxYQLqDZX5X6e6AhhvFCWhPyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\SözlükForum28-12\\SözlükForum\\SözlükForum.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.session\\2.2.0\\microsoft.aspnetcore.session.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.4\\microsoft.codeanalysis.analyzers.2.9.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.codeanalysis.common\\3.3.1\\microsoft.codeanalysis.common.3.3.1.nupkg.sha512",

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using SözlükForum.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace SözlükForum.Controllers
 {
@@ -25,6 +26,7 @@ namespace SözlükForum.Controllers
         public IActionResult Index(string searchString)
         {
             var bilgi = c.ForumSorus.Include(i => i.kullanici);
+            ViewData["a"] = HttpContext.Session.GetString("isUserLogin");
             var bilgiler = c.ForumSorus.OrderBy(r => Guid.NewGuid()).Take(10);
             ViewData["gundem"] = bilgiler;
             if (!String.IsNullOrEmpty(searchString))
