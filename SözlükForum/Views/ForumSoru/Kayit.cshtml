@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model SözlükForum.Models.ForumSoru
+<form method="post">
+    <div class="form-group">
+        @Html.LabelFor(x => x.soru)
+        @Html.TextBoxFor(x => x.soru, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(x => x.icerik)
+        @Html.TextBoxFor(x => x.icerik, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="katego">Kategori</label>
+        <select asp-for="katego" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Katego>()">
+            <option value="">Lütfen Seçiniz...</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary btn-block">Gönder</button>
+</form>

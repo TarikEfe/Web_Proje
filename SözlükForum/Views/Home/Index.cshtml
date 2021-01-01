@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+    var gundem = ViewData["gundem"];
+}
+@model IEnumerable<SözlükForum.Models.ForumSoru>
+<div class="row">
+    @*<div class="col-3">
+        <div class="overflow-auto container " style="max-height:640px; position:fixed; border-right-style: solid; max-width:250px;">
+            <h3 style="background-color:#e5e969; border-radius:5px;">Gündem</h3>
+            <hr />
+            <ul class="list-group">
+                @foreach (var item in Model)
+                {
+                    <a style="color:black" href="/ForumSoru/Detail/@item.Id"><li class="list-group-item list-group-item-light">@Html.DisplayFor(modelItem => item.soru)</li></a>
+                }
+            </ul>
+        </div>
+    </div>*@
+    <div class="col-3">
+        @Html.Partial("_Gundemm", gundem)
+    </div>
+    <div class="col-9">
+        @if (Model is null)
+        {
+            <div class="alert alert-danger">
+                <strong>Üzgünüz!</strong> sonuç bulunamadı...
+            </div>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <div style="background-color:#faf7d3; border-radius:5%" class="container">
+                    <div>
+                        <a style="color:black" href="/ForumSoru/Detail/@item.Id"><h2 class="text-center">@Html.DisplayFor(modelItem => item.soru)</h2></a>
+                        <p class="text-right">@Html.DisplayFor(modelItem => item.kullanici.kullanıcıAd)</p>
+                    </div>
+                    <hr />
+                    <div>
+                        <p>@Html.DisplayFor(modelItem => item.icerik)</p>
+                        <p class="text-right"><i>@Html.DisplayFor(modelItem => item.eklemeTarih)</i></p>
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+    </div>
+</div>
