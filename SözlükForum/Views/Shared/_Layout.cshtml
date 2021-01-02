@@ -44,14 +44,26 @@
         </nav>
         <nav class="navbar navbar-expand-md navbar-light" style="background-color:#e5e969; height:auto;">
             <div class="container">
-                <a href="#" class="nav-item nav-link">Spor</a>
-                <a href="#" class="nav-item nav-link">Ekonomi</a>
-                <a href="#" class="nav-item nav-link">Sağlık</a>
-                <a href="#" class="nav-item nav-link">Eğitim</a>
+                <a href="/Home/IndexKato/1" class="nav-item nav-link">Spor</a>
+                <a href="/Home/IndexKato/2" class="nav-item nav-link">Ekonomi</a>
+                <a href="/Home/IndexKato/3" class="nav-item nav-link">Sağlık</a>
+                <a href="/Home/IndexKato/4" class="nav-item nav-link">Eğitim</a>
+                <a href="/Home/IndexKato/5" class="nav-item nav-link">Diğer</a>
             </div>
         </nav>
     </header>
     <br />
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a asp-action="Kayit" asp-controller="ForumSoru" class="btn btn-info btn-block">Soru Yaz</a>
+                </div>
+            </div>
+        </div>
+        <br />
+    }
     <div class="container">
         <div class="row">
             <div class="col-12">

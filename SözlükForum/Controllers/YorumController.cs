@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SözlükForum.Models;
 
@@ -11,7 +12,9 @@ namespace SözlükForum.Controllers
     public class YorumController : Controller
     {
         Contex c = new Contex();
+
         [HttpPost]
+        [Authorize]
         public IActionResult Ekle(Yorum y)
         {
             if (y.Icerik != "")

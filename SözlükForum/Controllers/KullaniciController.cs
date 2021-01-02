@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,7 @@ namespace SözlükForum.Controllers
         [HttpPost]
         public IActionResult YeniKullanici(Kullanici k)
         {
+            k.admin = false;
             if (ModelState.IsValid)
             {
                 c.Kullanicis.Add(k);
@@ -56,13 +58,19 @@ namespace SözlükForum.Controllers
                 var useridentity = new ClaimsIdentity(claims, "Login");
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
                 await HttpContext.SignInAsync(principal);
+                var admin = c.Kullanicis.Where(x => x.kullanıcıAd == k.kullanıcıAd).FirstOrDefault(x => x.admin == true);
+                if (!(admin is null))
+                {
+                    return RedirectToAction("Index", "Panel");
+                }
                 return RedirectToAction("index", "Home");
             }
             return RedirectToAction("GirisYap");
         }
-
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
+            await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
     }

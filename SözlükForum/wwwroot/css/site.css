@@ -76,3 +76,25 @@ body {
 .navbar-link:hover {
     color: #faf7d3;
 }
+
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+/*.gundem {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;*/  /*number of lines to show */
+    /*-webkit-box-orient: vertical;
+}*/
+/*.gundem {
+    display: block;
+    width: 225px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}*/

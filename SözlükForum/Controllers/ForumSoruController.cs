@@ -60,7 +60,7 @@ namespace SözlükForum.Controllers
                 return View("Error", id);
             }
         }
-
+        [Authorize]
         public IActionResult Kayit()
         {
 

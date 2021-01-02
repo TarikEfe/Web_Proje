@@ -25,6 +25,9 @@ namespace SözlükForum.Models
         [EmailAddress]
         public string email { get; set; }
 
+        [Required]
+        public bool admin { get; set; }
+
         public List<ForumSoru> forumSorus { get; set; }
         public List<Yorum> yorums { get; set; }
 

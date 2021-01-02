@@ -6,17 +6,17 @@
 @model IEnumerable<SözlükForum.Models.ForumSoru>
 <div class="row">
     @*<div class="col-3">
-        <div class="overflow-auto container " style="max-height:640px; position:fixed; border-right-style: solid; max-width:250px;">
-            <h3 style="background-color:#e5e969; border-radius:5px;">Gündem</h3>
-            <hr />
-            <ul class="list-group">
-                @foreach (var item in Model)
-                {
-                    <a style="color:black" href="/ForumSoru/Detail/@item.Id"><li class="list-group-item list-group-item-light">@Html.DisplayFor(modelItem => item.soru)</li></a>
-                }
-            </ul>
-        </div>
-    </div>*@
+            <div class="overflow-auto container " style="max-height:640px; position:fixed; border-right-style: solid; max-width:250px;">
+                <h3 style="background-color:#e5e969; border-radius:5px;">Gündem</h3>
+                <hr />
+                <ul class="list-group">
+                    @foreach (var item in Model)
+                    {
+                        <a style="color:black" href="/ForumSoru/Detail/@item.Id"><li class="list-group-item list-group-item-light">@Html.DisplayFor(modelItem => item.soru)</li></a>
+                    }
+                </ul>
+            </div>
+        </div>*@
     <div class="col-3">
         @Html.Partial("_Gundemm", gundem)
     </div>
