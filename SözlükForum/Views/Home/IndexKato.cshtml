@@ -1,9 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<SözlükForum.Models.ForumSoru>
+@{
+    
+    ViewData["Title"] = "kategori";
     Layout = "_Layout";
     var gundem = ViewData["gundem"];
 }
-@model IEnumerable<SözlükForum.Models.ForumSoru>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a asp-action="Kayit" asp-controller="ForumSoru" class="btn btn-info btn-block">Soru Yaz</a>
+            </div>
+        </div>
+    </div>
+    <br />
+}
 <div class="row">
     @*<div class="col-3">
             <div class="overflow-auto container " style="max-height:640px; position:fixed; border-right-style: solid; max-width:250px;">
@@ -17,10 +30,10 @@
                 </ul>
             </div>
         </div>*@
-    <div class="col-3">
+    <div class="col-4">
         @Html.Partial("_Gundemm", gundem)
     </div>
-    <div class="col-9">
+    <div class="col-8">
         @if (Model is null)
         {
             <div class="alert alert-danger">

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "ForumIndex";
+    ViewData["Title"] = "Forumlar";
     Layout = "~/Views/Panel/panelLayout.cshtml";
 }
 
@@ -24,8 +24,8 @@
             <td><p class="text">@item.icerik</p></td>
             <td>@item.katego</td>
             <td>@item.kullanici.kullanıcıAd</td>
-            <td><a href="/Panel/SoruUpdate/@item.Id" class="btn btn-primary">Güncelle</a></td>
-            <td><a href="/Panel/SoruSil/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Panel/SoruUpdate/@item.Id" class="btn btn-primary">@localizer["guncelle"]</a></td>
+            <td><a href="/Panel/SoruSil/@item.Id" class="btn btn-danger">@localizer["sil"]</a></td>
         </tr>
     }
 </table>

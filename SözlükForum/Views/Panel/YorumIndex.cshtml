@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "YorumIndex";
+    ViewData["Title"] = "Yorumlar";
     Layout = "~/Views/Panel/panelLayout.cshtml";
 }
 @model ViewData
@@ -24,8 +24,8 @@
             <td>@item.kullanici.kullanıcıAd</td>
             <td>@item.forumsoru.Id</td>
             <td>@item.Zaman</td>
-            <td><a href="/Panel/YorumUpdate/@item.Id" class="btn btn-primary">Güncelle</a></td>
-            <td><a href="/Panel/YorumSil/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Panel/YorumUpdate/@item.Id" class="btn btn-primary">@localizer["guncelle"]</a></td>
+            <td><a href="/Panel/YorumSil/@item.Id" class="btn btn-danger">@localizer["sil"]</a></td>
         </tr>
     }
 </table>

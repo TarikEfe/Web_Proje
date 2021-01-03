@@ -30,7 +30,8 @@ namespace SözlükForum.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("icerik")
-                        .HasColumnType("Varchar(1000)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<int>("katego")
                         .HasColumnType("int");
@@ -40,7 +41,8 @@ namespace SözlükForum.Migrations
 
                     b.Property<string>("soru")
                         .IsRequired()
-                        .HasColumnType("Varchar(500)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
@@ -65,11 +67,13 @@ namespace SözlükForum.Migrations
 
                     b.Property<string>("kullanıcıAd")
                         .IsRequired()
-                        .HasColumnType("Varchar(20)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("sifre")
                         .IsRequired()
-                        .HasColumnType("Varchar(10)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("id");
 

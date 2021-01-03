@@ -13,12 +13,11 @@ namespace SözlükForum.Models
         [Key]
         public int id { get; set; }
         [Required(ErrorMessage = "Boş Bırakamazsınız...")]
-        [Column(TypeName = "Varchar(20)")]
-        [Remote("YeniKullanici", "Kullanici", ErrorMessage = "Email already exists!")]
+        [MaxLength(40, ErrorMessage = "Maksimum 40 Karakter Olmalı...")]
         public string kullanıcıAd { get; set; }
 
         [DataType(DataType.Password)]
-        [Column(TypeName = "Varchar(10)")]
+        [MaxLength(10, ErrorMessage ="Maksimum 10 Karakter Olmalı...")]
         [Required(ErrorMessage = "Boş Bırakamazsınız...")]
         public string sifre { get; set; }
         [Required(ErrorMessage = "Boş Bırakamazsınız...")]
@@ -32,4 +31,5 @@ namespace SözlükForum.Models
         public List<Yorum> yorums { get; set; }
 
     }
+
 }

@@ -3,7 +3,7 @@
 *@
 @model IEnumerable<SözlükForum.Models.ForumSoru>
 <div class="overflow-auto container " style="max-height:640px; position:fixed; border-right-style: solid; max-width:265px;">
-    <h3 class="text-center" style="background-color:#e5e969; border-radius:5px;">Gündem</h3>
+    <h3 class="text-center" style="background-color:#e5e969; border-radius:5px;">@localizer["gündem"]</h3>
     <hr />
     <ul class="list-group">
         @foreach (var item in Model)

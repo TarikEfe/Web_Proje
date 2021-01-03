@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Kullanıcılar";
     Layout = "~/Views/Panel/panelLayout.cshtml";
 }
 @model ViewData
@@ -20,8 +20,8 @@
             <td>@item.id</td>
             <td>@item.kullanıcıAd</td>
             <td>@item.email</td>
-            <td><a href="/Panel/KullaniciUpdate/@item.id" class="btn btn-primary">Güncelle</a></td>
-            <td><a href="/Panel/KullaniciSil/@item.id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Panel/KullaniciUpdate/@item.id" class="btn btn-primary">@localizer["guncelle"]</a></td>
+            <td><a href="/Panel/KullaniciSil/@item.id" class="btn btn-danger">@localizer["sil"]</a></td>
         </tr>
     }
 </table>

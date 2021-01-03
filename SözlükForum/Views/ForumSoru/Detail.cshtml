@@ -3,6 +3,9 @@
 *@
 @model SözlükForum.Models.ViewData
 @{
+    var baslık = @Model.forumSoruss.First();
+    var baslıkk = baslık.soru;
+    ViewData["Title"] = baslıkk;
 }
 <div style="background-color:#faf7d3; border-radius:5%" class="container">
     @foreach (var item in Model.forumSoruss)

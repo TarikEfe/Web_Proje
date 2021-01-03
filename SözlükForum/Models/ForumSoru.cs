@@ -12,15 +12,15 @@ namespace SözlükForum.Models
         [Key]
         public int Id { get; set; }
         [Required(ErrorMessage = "Bu Alanı Boş Bırakamazsınız...")]
-        [Column(TypeName = "Varchar(500)")]
+        [StringLength(100, ErrorMessage = "Max 100 olmalı")]
         public string soru { get; set; }
         public Kullanici kullanici { get; set; }
         public DateTime eklemeTarih { get; set; }
-        [Column(TypeName = "Varchar(1000)")]
+        [StringLength(500, ErrorMessage = "Max 500 olmalı")]
         public string icerik { get; set; }
 
         public List<Yorum> yorums { get; set; }
-
+        [Required(ErrorMessage ="Seçim Yapmalısınız...")]
         public Katego katego { get; set; } 
 
         public ForumSoru()

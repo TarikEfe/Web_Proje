@@ -305,6 +305,14 @@
         "runtime": {
           "SözlükForum.dll": {}
         },
+        "resources": {
+          "en/SözlükForum.resources.dll": {
+            "locale": "en"
+          },
+          "tr/SözlükForum.resources.dll": {
+            "locale": "tr"
+          }
+        },
         "compile": {
           "SözlükForum.dll": {}
         }

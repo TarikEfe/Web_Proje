@@ -52,12 +52,13 @@ namespace SözlükForum.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("GirisYap", "Kullanici");
+                    ViewBag.mesaj = "Giriş Yapılamadı.";
+                    return View("GirisYap");
                 }
             }
             catch
             {
-                return View("Error", id);
+                return RedirectToAction("Index","Home");
             }
         }
         [Authorize]
